@@ -18,7 +18,7 @@ These forecasts are produced using Extreme Learning Machine (ELM) based Multi-Mo
 
 **Predictand:** SASCOF observed JJAS precipitation
 
-**Training Period:** 1982-2019 
+**Training Period:** April Initializations from 1982-2019 
 
 **Hyper-Parameters:** 
  - 5 hidden layer neurons using ReLu activation
