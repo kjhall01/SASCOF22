@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+# SASCOF 2022: Seasonal Forecasts of Summer Monsoon Rainfall with Extreme Learning Machine 
+### By Nachiketa Acharya & Kyle Hall
 
-You can use the [editor on GitHub](https://github.com/kjhall01/SASCOF22/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Here we present both deterministic and probabilistic seasonal forecasts of Summer Monsoon Rainfall (SMR) over the South Asia region. This rainfall occurs during the JJAS season, and is characterized by high interannual variability, which presents a significant forecasting challenge. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+These forecasts are produced using Extreme Learning Machine (ELM) based Multi-Model Ensembles. ELM is a neural network-based non-linear regression method, which serves as a fast alternative to the traditional Single Layer Feed-Forward neural network. (Huang et al, 20??) Since ELM is designed to produce deterministic forecasts, we have used a modified version known as Probabilistic Output ELM (POELM) to produce probabilistic forecasts. POELM replaces the linear objective function of ELM with a sigmoid objective function, and uses sigmoid additive hidden neurons. (POELM paper, 2018) Here, we have also altered the hidden neurons of POELM to use different types of activation functions, and adopted a postprocessing rule using normalization and softmax to ensure that the tercile probabilities are reasonable. (Pending publication) 
 
-### Markdown
+# Summer Monsoon Rainfall 2022 Forecast: 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<div align='center'>
+ <img src="https://github.com/kjhall01/SASCOF22/blob/master/2022forecast.png?raw=true" alt="fcst"/>
+</div>
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Experimental Design: 
 
-- Bulleted
-- List
+**Predictors:** 4 North American Multi-Model Ensemble (NMME) models - CCSM4, CFSv2, NASA-GEOS, and CANSIPS-IC3    
 
-1. Numbered
-2. List
+**Predictand:** SASCOF observed JJAS precipitation
 
-**Bold** and _Italic_ and `Code` text
+**Training Period:** 1982-2019 
 
-[Link](url) and ![Image](src)
-```
+**Hyper-Parameters:** 
+ - 5 hidden layer neurons using ReLu activation
+ - MinMax scaling to (-1, 1) of predictors 
+ - Simple anomaly scaling of predictand
+ - One-Hot Encoding of predictand for POELM 
+ - Cross Validation Window: 3 years (Leave-3yrs-Out Crossvalidation)
+ - 3x3 Gaussian Kernel Smoothing of output
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+<div align='center'>
+ <img src="https://github.com/kjhall01/SASCOF22/blob/master/skillmetrics.png?raw=true" alt="skill"/>
+</div>
+<p align='center'>
+  <b>Leave-3-Out Cross-Validated Skill Metrics</b>
+</p>
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kjhall01/SASCOF22/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
