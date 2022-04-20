@@ -1,5 +1,6 @@
 # SASCOF 2022: Seasonal Forecasts of Summer Monsoon Rainfall with Extreme Learning Machine 
 ### By Nachiketa Acharya & Kyle Hall
+[![DOI](https://zenodo.org/badge/482081356.svg)](https://zenodo.org/badge/latestdoi/482081356)
 
 Here we present both deterministic and probabilistic seasonal forecasts of Summer Monsoon Rainfall (SMR) over the South Asia region. This rainfall occurs during the JJAS season, and is characterized by high interannual variability, which presents a significant forecasting challenge. 
 
