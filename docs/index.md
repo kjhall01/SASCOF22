@@ -42,5 +42,5 @@ Acharya N, Srivastava N.A., Panigrahi B.K. and Mohanty U.C. (2014): Development 
 
 Guang-Bin Huang, Qin-Yu Zhu, & Chee-Kheong Siew. (2004). Extreme learning machine: A new learning scheme of feedforward neural networks. 2, 985–990 vol.2. https://doi.org/ 10.1109/IJCNN.2004.1380068.
 
-Wong SY, Yap KS, Li X (2020) A new probabilistic output constrained optimization extreme learning machine. IEEE Access 8:28,934– 28,946.![image](https://user-images.githubusercontent.com/102978630/164566942-c9af7c23-4f32-43b5-95a5-f07ce475f3f7.png)
+Wong SY, Yap KS, Li X (2020) A new probabilistic output constrained optimization extreme learning machine. IEEE Access 8:28,934– 28,946.
 
